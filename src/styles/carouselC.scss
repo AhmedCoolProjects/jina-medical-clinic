@@ -6,7 +6,41 @@
   .Project {
     position: relative;
     overflow: hidden;
-    padding: 1vw;
     height: 380px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
   }
+}
+.big_img_carousel {
+  height: 90%;
+  object-fit: contain;
+}
+.img_carousel_container {
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.carousel_left {
+  width: 50%;
+  height: 100%;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 32px;
+  z-index: 1;
+  p {
+    margin-left: 24px;
+    font-size: 20px;
+  }
+  h1 {
+    margin-bottom: 24px;
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 900px) {
 }

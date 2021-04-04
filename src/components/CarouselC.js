@@ -1,62 +1,19 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import { Grid, makeStyles, Paper, Typography } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 import "../styles/carouselC.scss";
 import doctorImg from "../assets/doctor.png";
 
-const useStyles = makeStyles((theme) => ({
-  mainFeaturedCardContent: {
-    position: "relative",
-    zIndex: 1,
-    padding: theme.spacing(3),
-    [theme.breakpoints.up("md")]: {
-      padding: theme.spacing(6),
-      paddingRight: 0,
-    },
-  },
-}));
 function Project({ item }) {
-  const classes = useStyles();
   return (
-    <Paper
-      className="Project"
-      style={{
-        background: "transparent",
-      }}
-      elevation={0}>
-      <img
-        alt="this_is"
-        src={doctorImg}
-        style={{
-          height: "90%",
-          objectFit: "contain",
-          position: "absolute",
-          right: "5%",
-          top: "5%",
-        }}
-      />
-      <Grid container>
-        <Grid item md={6}>
-          <div className={classes.mainFeaturedCardContent}>
-            <Typography
-              component="h1"
-              variant="h2"
-              color="inherit"
-              gutterBottom>
-              {item.name}
-            </Typography>
-            <Typography
-              style={{ marginLeft: 15 }}
-              variant="h5"
-              color="inherit"
-              paragraph>
-              {item.description}
-            </Typography>
-          </div>
-        </Grid>
-      </Grid>
-
-      {/* <Button className="CheckButton">Check it out!</Button> */}
+    <Paper className="Project" elevation={0}>
+      <div className="carousel_left">
+        <h1>{item.name}</h1>
+        <p>{item.description}</p>
+      </div>
+      <div className="img_carousel_container">
+        <img alt="big_image" src={doctorImg} className="big_img_carousel" />
+      </div>
     </Paper>
   );
 }

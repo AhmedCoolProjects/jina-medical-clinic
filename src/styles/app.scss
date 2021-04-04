@@ -78,3 +78,22 @@
     }
   }
 }
+@media screen and (max-width: 900px) {
+  .sub_all {
+    flex-direction: column;
+    width: 100%;
+    height: 800px;
+    .sub_left_side {
+      width: 100%;
+      height: 50%;
+    }
+    .sub_right_side {
+      display: flex;
+      width: 100%;
+      height: 50%;
+      h1 {
+        margin-left: 0;
+      }
+    }
+  }
+}
